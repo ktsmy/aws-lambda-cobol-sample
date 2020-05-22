@@ -18,16 +18,15 @@ Resources:
   # Each Lambda function is defined by properties:
   # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
 
-  # This is a Lambda function config associated with the source code: get-all-items.js
   function1:
     Type: AWS::Serverless::Function
     Properties:
       Handler: cobol.function1
       Runtime: provided
       CodeUri: lambda-cobol-runner.zip
-      MemorySize: 128
+      MemorySize: 1024
       Timeout: 100
-      Description: A simple example includes a HTTP get method to get all items from a DynamoDB table.
+      Description: Calling COBOL with lambda and API gateway - Funtion 1
       Events:
         Api:
           Type: Api
@@ -41,9 +40,9 @@ Resources:
       Handler: cobol.function2
       Runtime: provided
       CodeUri: lambda-cobol-runner.zip
-      MemorySize: 128
+      MemorySize: 1024
       Timeout: 100
-      Description: A simple example includes a HTTP get method to get all items from a DynamoDB table.
+      Description: Calling COBOL with lambda and API gateway - Funtion 2
       Events:
         Api:
           Type: Api
