@@ -1,22 +1,17 @@
 # aws-lambda-cobol-sample
 
 ## Requires
-- Docker
+- Docker: https://www.docker.com/
+- SAM: https://aws.amazon.com/serverless/sam/
+
+## Reccomended
+- OpenCOBOL IDE: https://launchpad.net/cobcide/+download
 
 ## Build
 
 ```bash
-$ ./build.sh
+$ ./build.sh {manifestName}
 ```
-Package "lambda-cobol-hello.zip" will be created.
+Package "lambda-cobol-{manifestName}.zip" will be created.
 
-## Create lambda function
-
-```bash
-$ aws lambda create-function \
-    --function-name hello-cobol \
-    --runtime provided \
-    --role <execution_role> \  # enter your lambda execution role
-    --handler cobol.hello \
-    --zip-file fileb://lambda-cobol-hello.zip
-```
+## SAM Usage
